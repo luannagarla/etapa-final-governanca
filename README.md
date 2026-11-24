@@ -128,30 +128,21 @@ A classificação dos eventos em clusters não representa automaticamente sua cr
 
 ## 6. Limitações e riscos
 
-Apesar dos benefícios, a solução apresenta limitações que precisam ser consideradas.
+Apesar dos resultados obtidos, existem pontos que precisam ser aprimorados. Entre as principais melhorias estão:
+- Validar os perfis encontrados com especialistas.
+- Avaliar outras técnicas de agrupamento.
+- Incorporar informações internas das organizações.
+- Definir critérios de priorização com regras de negócio.
+- Automatizar o monitoramento.
+- Avaliar periodicamente a estabilidade dos clusters.
 
-A primeira está relacionada à própria fonte de dados: eventos divulgados publicamente não representam necessariamente todos os incidentes cibernéticos ocorridos.
-
-Além disso, a elevada ausência de informações em determinados campos limita a possibilidade de realizar análises mais completas.
-
-Outra limitação está relacionada ao algoritmo escolhido. O K-Means trabalha com distâncias entre representações numéricas, e a similaridade encontrada não significa necessariamente equivalência em termos de gravidade ou impacto.
-
-Também não foram incorporadas informações internas de uma organização, como criticidade dos ativos, dependências operacionais, impacto financeiro ou exposição de sistemas.
-
-Por esse motivo, a solução não deve ser utilizada isoladamente para definir prioridades de resposta ou determinar o nível de risco de um incidente.
 
 ## 7. Evolução e próximos passos
 
-Para ampliar a utilidade da solução em um ambiente organizacional, recomenda-se desenvolver as seguintes atividades:
-
-1. **Dashboard gerencial:** disponibilizar visualizações dos eventos, perfis dos clusters e indicadores de qualidade.
-2. **Monitoramento automatizado:** acompanhar alterações na qualidade dos dados e na distribuição dos agrupamentos.
-3. **Versionamento:** implementar controle de versões do código, dados e modelos.
-4. **Validação especializada:** envolver profissionais de segurança da informação na avaliação dos perfis encontrados.
-5. **Integração com dados internos:** considerar informações sobre ativos, sistemas e criticidade do ambiente organizacional.
-6. **Aprimoramento da análise de prioridade:** definir critérios organizacionais validados para apoiar a avaliação de incidentes.
-
-Essas atividades representam possibilidades de evolução e não devem ser consideradas funcionalidades já concluídas.
+1. **Monitoramento automatizado:** acompanhar alterações na qualidade dos dados e na distribuição dos agrupamentos.
+2. **Validação especializada:** envolver profissionais de segurança da informação na avaliação dos perfis encontrados.
+3. **Integração com dados internos:** considerar informações sobre ativos, sistemas e criticidade do ambiente organizacional.
+5. **Aprimoramento da análise de prioridade:** definir critérios organizacionais validados para apoiar a avaliação de incidentes.
 
 ## 8. Conclusão
 
