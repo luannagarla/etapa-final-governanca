@@ -1,0 +1,10 @@
+﻿campo,disponivel,percentual_preenchido,valores_distintos,observacao
+duration,True,0.0,0,Possível evidência para avaliação; significado e qualidade precisam ser validados.
+magnitude,True,0.0,0,Possível evidência para avaliação; significado e qualidade precisam ser validados.
+scope,True,0.0,0,Possível evidência para avaliação; significado e qualidade precisam ser validados.
+org_data,True,12.42,1057,Possível evidência para avaliação; significado e qualidade precisam ser validados.
+cust_data,True,12.55,1290,Possível evidência para avaliação; significado e qualidade precisam ser validados.
+event_type,True,99.99,4,Possível evidência para avaliação; significado e qualidade precisam ser validados.
+industry,True,100.0,28,Possível evidência para avaliação; significado e qualidade precisam ser validados.
+country,True,99.99,182,Possível evidência para avaliação; significado e qualidade precisam ser validados.
+year,True,100.0,13,Possível evidência para avaliação; significado e qualidade precisam ser validados.

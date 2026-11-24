@@ -1,0 +1,149 @@
+{
+  "experiment_id": "cedb-kmeans-20261124T140115Z",
+  "execution_date_utc": "2026-11-24T14:01:15.083434+00:00",
+  "tracking_method": "JSON + joblib (tracking baseado em arquivos; sem MLflow)",
+  "experiment": {
+    "name": "Clustering de eventos ciberneticos - CEDB",
+    "objective": "Identificar perfis semelhantes de eventos para apoiar a análise humana."
+  },
+  "data": {
+    "source": "Cyber Events Database (CEDB)",
+    "file": "cyber_events_tratado.csv",
+    "sha256": "10844a6aec8ec956d4e57b40df618b18facb73137c86da553ccf018d366db269",
+    "records": 16863,
+    "original_columns": 21,
+    "features_used": [
+      "actor_type",
+      "industry",
+      "motive",
+      "country",
+      "actor_country"
+    ]
+  },
+  "preprocessing": {
+    "categorical_features": [
+      "actor_type",
+      "industry",
+      "motive",
+      "country",
+      "actor_country"
+    ],
+    "numeric_features": [],
+    "categorical_imputation": "SimpleImputer(strategy='constant', fill_value='Não informado')",
+    "one_hot_encoder": {
+      "handle_unknown": "ignore",
+      "min_frequency": 10,
+      "max_categories": 30
+    },
+    "numeric_imputation": null,
+    "numeric_scaling": null,
+    "transformed_shape": [
+      16863,
+      101
+    ]
+  },
+  "model_selection": {
+    "candidate_k": [
+      {
+        "k": 2,
+        "inercia": 43047.74078631363,
+        "silhouette": 0.25506746686517273
+      },
+      {
+        "k": 3,
+        "inercia": 38558.15287025502,
+        "silhouette": 0.19698145862825062
+      },
+      {
+        "k": 4,
+        "inercia": 35768.82099150994,
+        "silhouette": 0.16039902425773364
+      },
+      {
+        "k": 5,
+        "inercia": 33366.60352588096,
+        "silhouette": 0.17537162093482667
+      },
+      {
+        "k": 6,
+        "inercia": 32376.10599214626,
+        "silhouette": 0.17355952853316786
+      },
+      {
+        "k": 7,
+        "inercia": 30624.568155336707,
+        "silhouette": 0.16479435267494988
+      },
+      {
+        "k": 8,
+        "inercia": 30143.759843758417,
+        "silhouette": 0.1702145612416194
+      }
+    ],
+    "selection_criterion": "Maior Silhouette entre os valores testados",
+    "selected_k": 2
+  },
+  "final_model": {
+    "algorithm": "KMeans",
+    "parameters": {
+      "algorithm": "lloyd",
+      "copy_x": true,
+      "init": "k-means++",
+      "max_iter": 300,
+      "n_clusters": 2,
+      "n_init": 20,
+      "random_state": 42,
+      "tol": 0.0001,
+      "verbose": 0
+    },
+    "silhouette": 0.25506746686517273,
+    "silhouette_sample_size": 3000,
+    "inertia": 43047.74078631363,
+    "cluster_distribution": {
+      "0": {
+        "records": 4368,
+        "percentage": 25.9
+      },
+      "1": {
+        "records": 12495,
+        "percentage": 74.1
+      }
+    }
+  },
+  "environment": {
+    "python": "3.13.18",
+    "pandas": "2.2.3",
+    "numpy": "2.4.6",
+    "scikit_learn": "1.6.1",
+    "joblib": "1.6.0"
+  },
+  "model_artifact": {
+    "file": "resultados_cedb/experimentos/modelo_preprocessamento_kmeans_20261124T140115Z.joblib",
+    "sha256": "5098c09b17020aa9a564fbd1058a29765f304725101235e1d9b4bf96f82fda2c",
+    "contains": [
+      "preprocessador ajustado",
+      "modelo K-Means treinado",
+      "lista de variáveis utilizadas"
+    ]
+  },
+  "other_artifacts": [
+    "resultados_cedb/disponibilidade_campos_priorizacao.csv",
+    "resultados_cedb/distribuicao_clusters_por_ano.csv",
+    "resultados_cedb/eventos_com_clusters.csv",
+    "resultados_cedb/ficha_solucao.json",
+    "resultados_cedb/monitoramento_qualidade.csv",
+    "resultados_cedb/perfil_clusters.csv",
+    "resultados_cedb/qualidade_dados.csv"
+  ],
+  "reproducibility": {
+    "random_state": 42,
+    "dataset_hash_recorded": true,
+    "parameters_recorded": true,
+    "library_versions_recorded": true,
+    "preprocessor_saved": true,
+    "model_saved": true,
+    "code_git_commit": null,
+    "note": "O commit Git não é capturado automaticamente por esta célula."
+  },
+  "interpretation_limit": "Os clusters representam similaridade estatística, não níveis automáticos de risco."
+}

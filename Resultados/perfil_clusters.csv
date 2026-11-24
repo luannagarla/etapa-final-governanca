@@ -1,0 +1,3 @@
+﻿cluster_id,quantidade_eventos,percentual_base,mais_frequente_actor_type,mais_frequente_industry,mais_frequente_motive,mais_frequente_country,mais_frequente_actor_country,ano_mediano
+0,4368,25.9,Hacktivist,Public Administration,Protest,United States of America,Undetermined,2022.0
+1,12495,74.1,Criminal,Health Care and Social Assistance,Financial,United States of America,Undetermined,2022.0

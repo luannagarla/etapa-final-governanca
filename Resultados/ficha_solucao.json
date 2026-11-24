@@ -1,0 +1,25 @@
+{
+  "nome": "Análise e agrupamento de eventos cibernéticos com a CEDB",
+  "objetivo": "Identificar perfis semelhantes de eventos para apoiar análise e priorização humana.",
+  "fonte": "Cyber Events Database (CEDB)",
+  "arquivo": "cyber_events_tratado.csv",
+  "sha256": "10844a6aec8ec956d4e57b40df618b18facb73137c86da553ccf018d366db269",
+  "data_execucao": "2026-11-24T14:01:15",
+  "registros": 16863,
+  "colunas_utilizadas_no_clustering": [
+    "actor_type",
+    "industry",
+    "motive",
+    "country",
+    "actor_country"
+  ],
+  "limite_percentual_nulos": 50.0,
+  "algoritmo": "K-Means",
+  "k_escolhido": 2,
+  "silhouette_k_escolhido": 0.25506746686517273,
+  "observacao": "Clusters representam similaridade estatística, não níveis automáticos de risco.",
+  "silhouette_modelo_final": 0.25506746686517273,
+  "inercia_modelo_final": 43047.74078631363,
+  "arquivo_modelo": "resultados_cedb/experimentos/modelo_preprocessamento_kmeans_20261124T140115Z.joblib",
+  "arquivo_registro_experimento": "resultados_cedb/experimentos/experimento_20261124T140115Z.json"
+}
